@@ -1,4 +1,3 @@
-import 'package:example/helpers/mock_image_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:octo_image/octo_image.dart';
 
@@ -51,24 +50,10 @@ class OctoImagePage extends StatelessWidget {
     return Row(
       children: <Widget>[
         Expanded(
-          child: AspectRatio(
-            aspectRatio: 269 / 173,
-            child: OctoImage.fromSet(
-              image: MockImageProvider(useCase: TestUseCase.loadAndFail),
-              octoSet: octoSet,
-              fit: BoxFit.cover,
-            ),
-          ),
+          child: AspectRatio(aspectRatio: 269 / 173, child: Container()),
         ),
         Expanded(
-          child: AspectRatio(
-            aspectRatio: 269 / 173,
-            child: OctoImage.fromSet(
-              image: MockImageProvider(useCase: TestUseCase.loadAndSuccess),
-              octoSet: octoSet,
-              fit: BoxFit.cover,
-            ),
-          ),
+          child: AspectRatio(aspectRatio: 269 / 173, child: Container()),
         ),
       ],
     );
